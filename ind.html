@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Page - TOKO 1er Jean Maldini</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.0.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body class="bg-gray-100 text-gray-900">
+
+    <!-- Header -->
+    <header class="bg-gray-800 text-white p-4 shadow-md">
+        <div class="container mx-auto flex items-center justify-between">
+            <h1 class="text-3xl font-bold">Jean Maldini</h1>
+            <!-- Navigation for larger screens -->
+            <nav class="hidden md:flex space-x-6">
+                <a href="#info" class="hover:text-teal-400 transition-colors">Info</a>
+                <a href="#work" class="hover:text-teal-400 transition-colors">Work</a>
+                <a href="#services" class="hover:text-teal-400 transition-colors">Services</a>
+                <a href="#assets" class="hover:text-teal-400 transition-colors">Assets</a>
+                <a href="#moodboards" class="hover:text-teal-400 transition-colors">Moodboards</a>
+                <a href="#appreciations" class="hover:text-teal-400 transition-colors">Appreciations</a>
+            </nav>
+            <!-- Hamburger Menu for smaller screens -->
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-teal-400 focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Dropdown Menu for smaller screens -->
+        <div id="menu" class="hidden md:hidden mt-4 bg-gray-800 text-white">
+            <a href="#info" class="block px-4 py-2 hover:bg-teal-400">Info</a>
+            <a href="#work" class="block px-4 py-2 hover:bg-teal-400">Work</a>
+            <a href="#services" class="block px-4 py-2 hover:bg-teal-400">Services</a>
+            <a href="#assets" class="block px-4 py-2 hover:bg-teal-400">Assets</a>
+            <a href="#moodboards" class="block px-4 py-2 hover:bg-teal-400">Moodboards</a>
+            <a href="#appreciations" class="block px-4 py-2 hover:bg-teal-400">Appreciations</a>
+        </div>
+    </header>
+
+    <!-- Profile Section -->
+    <section id="info" class="container mx-auto mt-10 bg-white p-8 rounded-lg shadow-lg">
+        <div class="text-center">
+            <img src="assets/images/profile.jpg" alt="Profile Picture" class="w-32 h-32 rounded-full mx-auto border-4 border-teal-400">
+            <h2 class="text-3xl font-bold mt-4">TOKO 1er Jean Maldini</h2>
+            <p class="text-gray-600">Creative Director/Comics - Legend Arts</p>
+            <p class="text-gray-600"><a href="https://www.facebook.com/toko1ejm" class="text-teal-500 hover:underline">www.facebook.com/toko1ejm</a></p>
+            <p class="text-gray-600">Wiłkopedzie, Poland</p>
+        </div>
+    </section>
+
+    <div class="section-divider my-10 border-t border-gray-300"></div>
+
+    <!-- Work Section -->
+    <section id="work" class="container mx-auto mt-10 bg-white p-8 rounded-lg shadow-lg">
+        <h2 class="text-3xl font-bold mb-6 text-center">Work</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- Experience 1: Creative Department Manager -->
+            <div class="hoverable cursor-pointer" onclick="openModal('modal1')">
+                <div class="experience-card p-4 border rounded-lg shadow-lg bg-teal-50 hover:shadow-xl transition-shadow duration-300 h-48 flex flex-col justify-center">
+                    <h3 class="text-xl font-semibold text-center">Creative Department Manager</h3>
+                    <p class="text-gray-600 text-center">ZEN Africa SAS</p>
+                </div>
+            </div>
+
+            <!-- Experience 2: Founder -->
+            <div class="hoverable cursor-pointer" onclick="openModal('modal2')">
+                <div class="experience-card p-4 border rounded-lg shadow-lg bg-teal-50 hover:shadow-xl transition-shadow duration-300 h-48 flex flex-col justify-center">
+                    <h3 class="text-xl font-semibold text-center">Founder</h3>
+                    <p class="text-gray-600 text-center">Legend Arts</p>
+                </div>
+            </div>
+
+            <!-- Experience 3: Author -->
+            <div class="hoverable cursor-pointer" onclick="openModal('modal3')">
+                <div class="experience-card p-4 border rounded-lg shadow-lg bg-teal-50 hover:shadow-xl transition-shadow duration-300 h-48 flex flex-col justify-center">
+                    <h3 class="text-xl font-semibold text-center">Author</h3>
+                    <p class="text-gray-600 text-center">3AG Edition</p>
+                </div>
+            </div>
+
+            <!-- Experience 4: Art Director -->
+            <div class="hoverable cursor-pointer" onclick="openModal('modal4')">
+                <div class="experience-card p-4 border rounded-lg shadow-lg bg-teal-50 hover:shadow-xl transition-shadow duration-300 h-48 flex flex-col justify-center">
+                    <h3 class="text-xl font-semibold text-center">Art Director</h3>
+                    <p class="text-gray-600 text-center">Zebra Comics PLC/SA</p>
+                </div>
+            </div>
+
+            <!-- Experience 5: Graphic Supervisor -->
+            <div class="hoverable cursor-pointer" onclick="openModal('modal5')">
+                <div class="experience-card p-4 border rounded-lg shadow-lg bg-teal-50 hover:shadow-xl transition-shadow duration-300 h-48 flex flex-col justify-center">
+                    <h3 class="text-xl font-semibold text-center">Graphic Supervisor</h3>
+                    <p class="text-gray-600 text-center">Open Solutions</p>
+                </div>
+            </div>
+
+            <!-- Experience 6: Student Intern -->
+            <div class="hoverable cursor-pointer" onclick="openModal('modal6')">
+                <div class="experience-card p-4 border rounded-lg shadow-lg bg-teal-50 hover:shadow-xl transition-shadow duration-300 h-48 flex flex-col justify-center">
+                    <h3 class="text-xl font-semibold text-center">Student Intern</h3>
+                    <p class="text-gray-600 text-center">Team@Solutions</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Modals -->
+    <!-- Modal structure remains the same, ensure it uses the updated colors -->
+    
+    <div class="section-divider my-10 border-t border-gray-300"></div>
+
+    <!-- Services Section -->
+    <section id="services" class="container mx-auto mt-10 bg-white p-8 rounded-lg shadow-lg">
+        <h2 class="text-3xl font-bold mb-6 text-center">Services</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Service 1 -->
+            <div class="service-card bg-teal-50 p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex items-center space-x-4">
+                <svg class="w-16 h-16 text-teal-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h18v18H3z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 9h6v6H9z" />
+                </svg>
+                <div class="flex-1">
+                    <h3 class="text-xl font-semibold">Brand Design</h3>
+                    <p class="text-gray-600">Creating strong and memorable brand identities.</p>
+                </div>
+            </div>
+            <!-- Service 2 -->
+            <div class="service-card bg-teal-50 p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex items-center space-x-4">
+                <svg class="w-16 h-16 text-teal-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6l4 2" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2a2 2 0 0 1 2-2z" />
+                </svg>
+                <div class="flex-1">
+                    <h3 class="text-xl font-semibold">Print Design</h3>
+                    <p class="text-gray-600">Designing print materials that captivate and inform.</p>
+                </div>
+            </div>
+            <!-- Service 3 -->
+            <div class="service-card bg-teal-50 p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex items-center space-x-4">
+                <svg class="w-16 h-16 text-teal-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 9l6 6 6-6" />
+                </svg>
+                <div class="flex-1">
+                    <h3 class="text-xl font-semibold">Web Design</h3>
+                    <p class="text-gray-600">Building user-friendly and visually appealing websites.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider my-10 border-t border-gray-300"></div>
+
+    <!-- Assets Section -->
+    <section id="assets" class="container mx-auto mt-10 bg-white p-8 rounded-lg shadow-lg">
+        <h2 class="text-3xl font-bold mb-6 text-center">Assets</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Asset 1 -->
+            <div class="asset-card p-4 border rounded-lg shadow-lg bg-teal-50 hover:shadow-xl transition-shadow duration-300">
+                <h3 class="text-xl font-semibold">Logo Design</h3>
+                <p class="text-gray-600">Professional logo design to enhance brand recognition.</p>
+            </div>
+            <!-- Asset 2 -->
+            <div class="asset-card p-4 border rounded-lg shadow-lg bg-teal-50 hover:shadow-xl transition-shadow duration-300">
+                <h3 class="text-xl font-semibold">Marketing Materials</h3>
+                <p class="text-gray-600">High-quality marketing materials that stand out.</p>
+            </div>
+            <!-- Asset 3 -->
+            <div class="asset-card p-4 border rounded-lg shadow-lg bg-teal-50 hover:shadow-xl transition-shadow duration-300">
+                <h3 class="text-xl font-semibold">Social Media Assets</h3>
+                <p class="text-gray-600">Designs tailored for social media platforms.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider my-10 border-t border-gray-300"></div>
+
+    <!-- Moodboards Section -->
+    <section id="moodboards" class="container mx-auto mt-10 bg-white p-8 rounded-lg shadow-lg">
+        <h2 class="text-3xl font-bold mb-6 text-center">Moodboards</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Moodboard 1 -->
+            <div class="moodboard-card p-4 border rounded-lg shadow-lg bg-teal-50 hover:shadow-xl transition-shadow duration-300">
+                <h3 class="text-xl font-semibold">Concept A</h3>
+                <p class="text-gray-600">A moodboard showcasing the initial concept.</p>
+            </div>
+            <!-- Moodboard 2 -->
+            <div class="moodboard-card p-4 border rounded-lg shadow-lg bg-teal-50 hover:shadow-xl transition-shadow duration-300">
+                <h3 class="text-xl font-semibold">Concept B</h3>
+                <p class="text-gray-600">Exploring different themes and color schemes.</p>
+            </div>
+            <!-- Moodboard 3 -->
+            <div class="moodboard-card p-4 border rounded-lg shadow-lg bg-teal-50 hover:shadow-xl transition-shadow duration-300">
+                <h3 class="text-xl font-semibold">Concept C</h3>
+                <p class="text-gray-600">Finalizing the design direction.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider my-10 border-t border-gray-300"></div>
+
+    <!-- Appreciations Section -->
+    <section id="appreciations" class="container mx-auto mt-10 bg-white p-8 rounded-lg shadow-lg">
+        <h2 class="text-3xl font-bold mb-6 text-center">Appreciations</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Appreciation 1 -->
+            <div class="appreciation-card p-4 border rounded-lg shadow-lg bg-teal-50 hover:shadow-xl transition-shadow duration-300">
+                <h3 class="text-xl font-semibold">Client A</h3>
+                <p class="text-gray-600">"Exceptional work and creativity!"</p>
+            </div>
+            <!-- Appreciation 2 -->
+            <div class="appreciation-card p-4 border rounded-lg shadow-lg bg-teal-50 hover:shadow-xl transition-shadow duration-300">
+                <h3 class="text-xl font-semibold">Client B</h3>
+                <p class="text-gray-600">"A pleasure to work with. Highly recommend!"</p>
+            </div>
+            <!-- Appreciation 3 -->
+            <div class="appreciation-card p-4 border rounded-lg shadow-lg bg-teal-50 hover:shadow-xl transition-shadow duration-300">
+                <h3 class="text-xl font-semibold">Client C</h3>
+                <p class="text-gray-600">"Great attention to detail and professionalism."</p>
+            </div>
+        </div>
+    </section>
+
+   <!-- Section Divider -->
+<div class="section-divider my-10 border-t border-gray-300"></div>
+
+<!-- Contact Form -->
+<section id="contact" class="container mx-auto mt-10 bg-white p-8 rounded-lg shadow-lg">
+    <h2 class="text-3xl font-bold mb-8 text-center text-gray-800">Contact</h2>
+    <form action="/submit" method="post" class="space-y-8">
+        <!-- Name Field -->
+        <div class="relative">
+            <input type="text" id="name" name="name" class="peer w-full p-4 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-teal-400 focus:ring-2 focus:ring-teal-400 transition duration-200" required>
+            <label for="name" class="absolute left-4 top-4 text-gray-600 pointer-events-none transition-all duration-200 ease-in-out peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:top-1 -peer-focus:text-xs peer-focus:text-teal-500 bg-white">Your Name</label>
+        </div>
+        <!-- Email Field -->
+        <div class="relative">
+            <input type="email" id="email" name="email" class="peer w-full p-4 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-teal-400 focus:ring-2 focus:ring-teal-400 transition duration-200" required>
+            <label for="email" class="absolute left-4 top-4 text-gray-600 pointer-events-none transition-all duration-200 ease-in-out peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:top-1 -peer-focus:text-xs peer-focus:text-teal-500 bg-white">Your Email</label>
+        </div>
+        <!-- Message Field -->
+        <div class="relative">
+            <textarea id="message" name="message" rows="4" class="peer w-full p-4 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-teal-400 focus:ring-2 focus:ring-teal-400 transition duration-200" required></textarea>
+            <label for="message" class="absolute left-4 top-4 text-gray-600 pointer-events-none transition-all duration-200 ease-in-out peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:top-1 -peer-focus:text-xs peer-focus:text-teal-500 bg-white">Your Message</label>
+        </div>
+        <!-- Submit Button -->
+        <div class="flex justify-center">
+            <button type="submit" class="bg-teal-400 text-white px-6 py-3 rounded-md hover:bg-teal-500 transition duration-200 shadow-md hover:shadow-lg">
+                Send
+            </button>
+        </div>
+    </form>
+</section>
+
+<div class="section-divider my-10 border-t border-gray-300"></div>
+
+<!-- Footer Section -->
+<footer class="bg-gray-800 text-white p-6">
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center md:text-left">
+        <!-- Contact Information -->
+        <div>
+            <h2 class="text-2xl font-bold mb-4">Contact</h2>
+            <p><strong>Email:</strong> <a href="mailto:toko1ejm@gmail.com" class="text-teal-400 hover:underline">toko1ejm@gmail.com</a></p>
+            <p><strong>Phone:</strong> +48 123 456 789</p>
+            <p><strong>Location:</strong> Wiłkopedzie, Poland</p>
+        </div>
+
+        <!-- About Section -->
+        <div>
+            <h2 class="text-2xl font-bold mb-4">About</h2>
+            <p>Creative Director and Comics Artist with a diverse background in visual arts. Passionate about innovative design and storytelling.</p>
+        </div>
+
+        <!-- Social Media Links -->
+        <div>
+            <h2 class="text-2xl font-bold mb-4">Follow Me</h2>
+            <div class="flex justify-center md:justify-start">
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/toko1ejm" class="text-white hover:text-teal-400 mx-2" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <!-- Twitter -->
+                <a href="https://twitter.com/toko1ejm" class="text-white hover:text-teal-400 mx-2" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <!-- GitHub -->
+                <a href="https://github.com/toko1ejm" class="text-white hover:text-teal-400 mx-2" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="bg-gray-800 text-gray-400 text-center p-4 mt-6">
+        <p>&copy; 2024 TOKO 1er Jean Maldini. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- Include Font Awesome for social icons -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+
+    <script>
+        document.getElementById('menu-btn').addEventListener('click', () => {
+            document.getElementById('menu').classList.toggle('hidden');
+        });
+
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.remove('hidden');
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.add('hidden');
+        }
+    </script>
+</body>
+
+</html>
